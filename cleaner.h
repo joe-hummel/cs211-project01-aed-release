@@ -23,4 +23,4 @@
   * @param ecg_data Vector of raw ECG signal samples.
   * @return true if cleaning was successful, false otherwise.
   */
-bool clean_ecg(std::vector<double> ecg_data);
+bool clean_ecg(std::vector<double>& ecg_data);
