@@ -1,6 +1,6 @@
 build:
 	rm -f ./a.out
-	g++ -std=c++20 -g -Wall -pedantic -Werror main.cpp cleaner.o visualize.o -Wno-unused-variable -Wno-unused-function
+	g++ -std=c++20 -g -Wall -pedantic -Werror main.cpp cleaner.o visualize.o -Wno-psabi -Wno-unused-variable -Wno-unused-function
 
 run:
 	./a.out
@@ -11,7 +11,7 @@ clean:
 
 valgrind:
 	rm -f ./a.out
-	g++ -std=c++20 -g -Wall -pedantic -Werror main.cpp cleaner.o visualize.o -Wno-unused-variable -Wno-unused-function
+	g++ -std=c++20 -g -Wall -pedantic -Werror main.cpp cleaner.o visualize.o -Wno-psabi -Wno-unused-variable -Wno-unused-function
 	valgrind --tool=memcheck --leak-check=yes --track-origins=yes ./a.out
 
 submit:
